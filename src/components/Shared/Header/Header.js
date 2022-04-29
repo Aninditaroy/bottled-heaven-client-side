@@ -15,12 +15,12 @@ const Header = () => {
                             <Link to="/"><img src={logo} className="my-2" alt="logo" /></Link>
                         </span>
                         <button
-                            className=" inline-flex items-center justify-center p-2 rounded-md text-white-600   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white lg:hidden"
+                            className="inline-flex items-center justify-center p-2  text-white-600 lg:hidden"
                             type="button"
                             onClick={() => setNavbarOpen(!navbarOpen)}
                         >
                             <img
-                                className="block h-8 w-8"
+                                className="block w-10 h-10 ml-10"
                                 src={hamburgerMenu}
                                 alt=""
                             />
