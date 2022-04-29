@@ -1,9 +1,8 @@
 import React from 'react';
-import usePerfumes from '../../../hooks/usePerfumes';
-import Perfume from '../Perfume/Perfume';
+import Inventory from '../Inventory/Inventory';
+import usePerfumes from './../../../hooks/usePerfumes';
 
-
-const Perfumes = () => {
+const Inventories = () => {
     const [perfumes] = usePerfumes();
     return (
         <>
@@ -11,7 +10,7 @@ const Perfumes = () => {
                 <div className="lg:mx-auto xl:mx-auto 2xl:mx-auto md:mx-auto mt-11">
                     <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 mb-20 md:gap-3 sm:gap-y-3 lg:px-10'>
                      {
-                         perfumes.map(perfume => <Perfume key={perfume._id} perfume={perfume}/>)
+                         perfumes.map(perfume => <Inventory key={perfume._id} perfume={perfume}/>)
                      }
                     </div>
                 </div>
@@ -20,4 +19,4 @@ const Perfumes = () => {
     );
 };
 
-export default Perfumes;
+export default Inventories;

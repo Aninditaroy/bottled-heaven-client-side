@@ -2,7 +2,7 @@ import React from 'react';
 import banner from '../../../images/perfumes/banner/banner.png';
 import './Home.css';
 import usePerfumes from './../../../hooks/usePerfumes';
-import Perfume from '../Perfume/Perfume';
+import Inventory from '../Inventory/Inventory';
 const Home = () => {
     const [perfumes] = usePerfumes();
     return (
@@ -20,7 +20,7 @@ const Home = () => {
                 <div className="lg:mx-auto xl:mx-auto 2xl:mx-auto md:mx-auto ">
                     <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 mb-20 md:gap-3 sm:gap-y-3 lg:px-10 '>
                      {
-                         perfumes.slice(0,3).map(perfume => <Perfume key={perfume._id} perfume={perfume}/>)
+                         perfumes.slice(0,6).map(perfume => <Inventory key={perfume._id} perfume={perfume}/>)
                      }
                     </div>
                 </div>

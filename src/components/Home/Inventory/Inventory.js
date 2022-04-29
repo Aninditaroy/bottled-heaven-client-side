@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Perfume = ({perfume}) => {
+const Inventory = ({perfume}) => {
     const {name,img,description,price,quantity,supplier_name} = perfume;
     return (
         <div className='mt-5'>
@@ -22,4 +22,4 @@ const Perfume = ({perfume}) => {
     );
 };
 
-export default Perfume;
+export default Inventory;

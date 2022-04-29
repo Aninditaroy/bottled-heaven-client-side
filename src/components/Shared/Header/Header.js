@@ -37,20 +37,20 @@ const Header = () => {
                             <Link
                                 className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
                                 hover:border-b-2"
-                                as={Link} to="/perfumes">
-                                Perfumes
+                                as={Link} to="/home">
+                                Home
+                            </Link>
+                            <Link
+                                className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
+                                hover:border-b-2"
+                                as={Link} to="/inventory">
+                                Inventory
                             </Link>
                             <Link
                                 className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
                                 hover:border-b-2"
                                 as={Link} to="/About">
                                 About
-                            </Link>
-                            <Link
-                                className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
-                                hover:border-b-2"
-                                as={Link} to="/Inventory">
-                                Inventory
                             </Link>
                             <Link
                                 className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
