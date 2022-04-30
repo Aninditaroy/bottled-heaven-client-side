@@ -40,7 +40,7 @@ const Header = () => {
                         }
                         id="example-navbar-danger"
                     >
-                        <div className="flex flex-col lg:flex-row lg:ml-auto lg:px-10 text-md">
+                        <div className="flex flex-col md:flex-row lg:flex-row lg:ml-auto lg:px-10 lg:text-md xl:text-ms 2xl:text-md sm:text-md md:text-sm ">
                             <Link
                                 className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
                                 hover:border-b-2"
@@ -65,6 +65,16 @@ const Header = () => {
                                 as={Link} to="/blog">
                                 Blog
                             </Link>
+                            {
+                                user && <>
+                                 <Link as={Link} to='/addinventories' className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
+                                hover:border-b-2">Add Inventories</Link>
+                                 <Link as={Link} to="/manageinventories" className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
+                                hover:border-b-2" >Manage Inventories</Link>
+                                 <Link as={Link} to="/myinventory" className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
+                                hover:border-b-2">My Inventory</Link>
+                                </>
+                            }
                            {
                                user 
                                ?
