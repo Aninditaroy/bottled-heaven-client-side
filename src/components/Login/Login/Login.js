@@ -50,15 +50,15 @@ const Login = () => {
     }
     return (
         <div>
-            <div className='flex items-center justify-center'>
+            <div className='flex items-center justify-center mb-20'>
                 <div className='lg:m-10 lg:p-10 sm:m-0 sm:w-52 sm:p-0 md:w-96 lg:w-96 2xl:w-96  shadow-xl bg-gray-100'>
                     <p className='text-2xl text-center font-bold mb-6 mt-4'>Login</p>
                     <form onSubmit={handleSubmit}>
                         <div className="mx-auto w-80 relative mb-5">
-                            <input ref={emailRef} type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Email" required/>
+                            <input ref={emailRef} type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Email" required/>
                         </div>
                         <div className="mx-auto w-80 relative mb-5">
-                            <input ref={passwordRef} type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Password" required />
+                            <input ref={passwordRef} type="password" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Password" required />
                         </div>
                         <button onClick={resetPassword}><p className='text-sm text-slate-500 hover:text-amber-800 hover:underline my-5'>Forget your password?</p></button>
                         <input type='submit' className="w-80 block text-white bg-black hover:bg-white hover:text-black border hover:border-black text-sm px-12 py-3  text-center mb-5 mx-auto mt-3 font-bold" value="Login" />
