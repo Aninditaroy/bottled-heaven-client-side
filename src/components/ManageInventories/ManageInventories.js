@@ -2,12 +2,29 @@ import React from 'react';
 import usePerfumes from '../../hooks/usePerfumes';
 import bin from '../../images/trash-bin.png';
 import addItem from '../../images/plus.png';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const ManageInventories = () => {
-    const [perfumes] = usePerfumes();
+    const [perfumes, setPerfumes] = usePerfumes();
     const navigate = useNavigate();
     const naviagteAddInventory = () => {
         navigate('/addinventories');
+    }
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure?');
+        if (proceed) {
+            const url = `http://localhost:5000/perfumes/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    toast(data);
+                    const remaining = perfumes.filter(perfume => perfume._id !== id);
+                    setPerfumes(remaining);
+                })
+        }
     }
     return (
         <div>
@@ -76,7 +93,7 @@ const ManageInventories = () => {
                                                     {perfume.description}
                                                 </td>
                                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                    <button className=' bg-red-500 w-8 h-8 rounded'><img src={bin} alt="" className="w-6 h-6 flex mx-auto" /></button>
+                                                    <button onClick={() => handleDelete(perfume._id)} className=' bg-red-500 w-8 h-8 rounded'><img src={bin} alt="" className="w-6 h-6 flex mx-auto" /></button>
                                                 </td>
                                             </tr>
                                         </>)
@@ -87,6 +104,7 @@ const ManageInventories = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };
