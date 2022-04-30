@@ -59,7 +59,7 @@ const ManageInventories = () => {
                                                                 {perfume.name}
                                                             </div>
                                                             <div class="text-sm text-gray-500">
-                                                                {perfume.price}
+                                                                ${perfume.price}
                                                             </div>
                                                         </div>
                                                     </div>
