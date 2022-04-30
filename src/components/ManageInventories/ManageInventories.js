@@ -64,9 +64,6 @@ const ManageInventories = () => {
                                                         </div>
                                                     </div>
                                                 </td>
-                                                {/* <td class="px-6 py-4 whitespace-nowrap">
-                                                    <span class="text-sm text-gray-900">{perfume.price}</span>
-                                                </td> */}
                                                 <td class="px-6 py-4 whitespace-nowrap">
                                                     <span class="text-sm text-gray-500 hover:bg-gray">{perfume.quantity}</span>
                                                 </td>
