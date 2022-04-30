@@ -46,10 +46,10 @@ const Login = () => {
                     <p className='text-2xl text-center font-bold mb-6 mt-4'>Login</p>
                     <form onSubmit={handleSubmit}>
                         <div className="mx-auto w-80 relative mb-5">
-                            <input ref={emailRef} type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Email" required />
+                            <input ref={emailRef} type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Email" />
                         </div>
                         <div className="mx-auto w-80 relative mb-5">
-                            <input ref={passwordRef} type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Password" required />
+                            <input ref={passwordRef} type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Password"  />
                         </div>
                         <button onClick={resetPassword}><p className='text-sm text-slate-500 hover:text-amber-800 hover:underline my-5'>Forget your password?</p></button>
                         <input type='submit' className="w-80 block text-white bg-black hover:bg-white hover:text-black hover:border hover:border-black text-sm px-12 py-3  text-center mb-5 mx-auto mt-3 font-bold" value="Login" />

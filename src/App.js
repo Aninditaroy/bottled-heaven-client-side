@@ -14,6 +14,7 @@ import MyInventory from './components/MyInventory/MyInventory';
 import ManageInventories from './components/ManageInventories/ManageInventories';
 import AddInventories from './components/AddInventories/AddInventories';
 import Notfound from './components/NotFound/Notfound';
+import Footer from './components/Shared/Footer/Footer';
 function App() {
   return (
     <>
@@ -40,6 +41,7 @@ function App() {
      }></Route>
       <Route path='*' element={<Notfound/>}></Route>
       </Routes>
+      <Footer/>
     </>
   );
 }
