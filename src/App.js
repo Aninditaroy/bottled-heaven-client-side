@@ -13,6 +13,7 @@ import InventoryDetails from './components/Home/InventoryDetails/InventoryDetail
 import MyInventory from './components/MyInventory/MyInventory';
 import ManageInventories from './components/ManageInventories/ManageInventories';
 import AddInventories from './components/AddInventories/AddInventories';
+import Notfound from './components/NotFound/Notfound';
 function App() {
   return (
     <>
@@ -37,6 +38,7 @@ function App() {
      <Route path='/myinventory' element={
        <MyInventory/>
      }></Route>
+      <Route path='*' element={<Notfound/>}></Route>
       </Routes>
     </>
   );
