@@ -2,7 +2,10 @@ import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import google from '../../../images/social/google.png';
 import auth from './../../../.firebase.init';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Login = () => {
     const navigate = useNavigate();
     const emailRef = useRef('');
@@ -14,8 +17,20 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+    const [sendPasswordResetEmail, passwordSending, passwordError] = useSendPasswordResetEmail(auth);
     const navigateRegister = () =>{
         navigate('/register');
+    }
+    const resetPassword = async() =>{
+        const email = emailRef.current.value;
+        if(email){
+            sendPasswordResetEmail(email);
+            toast('Send Email');
+        }
+        else{
+            toast('Please enter your email address');
+        }
+        
     }
     const handleSubmit = event => {
         event.preventDefault();
@@ -36,6 +51,7 @@ const Login = () => {
                         <div className="mx-auto w-80 relative mb-5">
                             <input ref={passwordRef} type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Password" required />
                         </div>
+                        <button onClick={resetPassword}><p className='text-sm text-slate-500 hover:text-amber-800 hover:underline my-5'>Forget your password?</p></button>
                         <input type='submit' className="w-80 block text-white bg-black hover:bg-white hover:text-black hover:border hover:border-black text-sm px-12 py-3  text-center mb-5 mx-auto mt-3 font-bold" value="Login" />
                     </form>
                     <div className='flex items-center mt-10 sm:p-16 lg:p-0'>
@@ -51,6 +67,7 @@ const Login = () => {
                     <div className='text-sm text-center mb-10 mt-4'><p>Don't have an account? <span className='hover:underline hover:text-amber-800 cursor-pointer' onClick={navigateRegister}>Create an account</span></p></div>
                 </div>
             </div>
+            <ToastContainer/>
         </div>
     );
 };

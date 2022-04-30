@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-fi
 import google from '../../../images/social/google.png';
 import auth from '../../../.firebase.init';
 import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -16,12 +17,16 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
-    const handleRegister = event => {
+    const handleRegister = async event => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-        createUserWithEmailAndPassword(email, password);
+        const confirmPassword = event.target.confirmPassword.value;
+        if (password !== confirmPassword) {
+            return swal("Error!", "Passwords did't match!", "error");
+        }
+        await createUserWithEmailAndPassword(email, password);
         navigate('/home');
     }
     return (
@@ -31,16 +36,16 @@ const Register = () => {
                     <p className='text-2xl text-center font-bold mb-6 mt-4'>Register</p>
                     <form onSubmit={handleRegister}>
                         <div className="mx-auto w-80 relative mb-5">
-                            <input type="text" name="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Name" required />
+                            <input type="text" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Name" />
                         </div>
                         <div className="mx-auto w-80 relative mb-5">
-                            <input type="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Email" required />
+                            <input type="email" name="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Email" required />
                         </div>
                         <div className="mx-auto w-80 relative mb-5">
-                            <input type="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Password" required />
+                            <input type="password" name="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Password" required />
                         </div>
                         <div className="mx-auto w-80 relative mb-5">
-                            <input type="password" name="confirm-password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Confirm Password" required />
+                            <input type="password" name="confirmPassword" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Confirm Password" />
                         </div>
                         <input type='submit' className="w-80 block text-white bg-black hover:bg-white hover:text-black hover:border hover:border-black text-sm px-12 py-3  text-center mb-5 mx-auto mt-3 font-bold" value="Register" />
                     </form>
