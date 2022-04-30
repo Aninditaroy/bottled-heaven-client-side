@@ -24,7 +24,7 @@ const Register = () => {
         const password = event.target.password.value;
         const confirmPassword = event.target.confirmPassword.value;
         if (password !== confirmPassword) {
-            return swal("Error!", "Passwords did't match!", "error");
+            return swal("Error!", "Passwords didn't match!", "error");
         }
         await createUserWithEmailAndPassword(email, password);
         navigate('/home');
@@ -47,7 +47,7 @@ const Register = () => {
                         <div className="mx-auto w-80 relative mb-5">
                             <input type="password" name="confirmPassword" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Confirm Password" />
                         </div>
-                        <input type='submit' className="w-80 block text-white bg-black hover:bg-white hover:text-black hover:border hover:border-black text-sm px-12 py-3  text-center mb-5 mx-auto mt-3 font-bold" value="Register" />
+                        <input type='submit' className="w-80 block text-white bg-black hover:bg-white hover:text-black border hover:border-black text-sm px-12 py-3  text-center mb-5 mx-auto mt-3 font-bold" value="Register" />
                     </form>
                     <div className='flex items-center mt-10'>
                         <div className='border border-b-1  border-black mb-2 w-40 mx-auto mt-3'></div>

@@ -61,7 +61,7 @@ const Login = () => {
                             <input ref={passwordRef} type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Password" required />
                         </div>
                         <button onClick={resetPassword}><p className='text-sm text-slate-500 hover:text-amber-800 hover:underline my-5'>Forget your password?</p></button>
-                        <input type='submit' className="w-80 block text-white bg-black hover:bg-white hover:text-black hover:border hover:border-black text-sm px-12 py-3  text-center mb-5 mx-auto mt-3 font-bold" value="Login" />
+                        <input type='submit' className="w-80 block text-white bg-black hover:bg-white hover:text-black border hover:border-black text-sm px-12 py-3  text-center mb-5 mx-auto mt-3 font-bold" value="Login" />
                     </form>
                     {errorElement}
                     <div className='flex items-center mt-10 sm:p-16 lg:p-0'>

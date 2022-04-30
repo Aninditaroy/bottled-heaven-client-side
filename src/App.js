@@ -18,30 +18,30 @@ import Footer from './components/Shared/Footer/Footer';
 function App() {
   return (
     <>
-      <Header/>
+      <Header />
       <Routes>
-      <Route path='/' element={<Home/>}></Route>
-      <Route path='/home' element={<Home/>}></Route>
-      <Route path='/inventory' element={<Inventories/>}></Route> 
-      <Route path='/login' element={<Login/>}></Route>
-      <Route path='/register' element={<Register/>}></Route>
-      <Route path='/inventory/:inventoryId' element={
-        <RequireAuth>
-          <InventoryDetails/>
-        </RequireAuth>
-      }></Route>
-     <Route path='/addinventories' element={
-       <AddInventories/>
-     }></Route>
-     <Route path='/manageinventories' element={
-        <ManageInventories/>
-     }></Route>
-     <Route path='/myinventory' element={
-       <MyInventory/>
-     }></Route>
-      <Route path='*' element={<Notfound/>}></Route>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/home' element={<Home />}></Route>
+        <Route path='/inventories' element={<Inventories />}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/register' element={<Register />}></Route>
+        <Route path='/inventory/inventorydetails/:inventoryId' element={
+          <RequireAuth>
+            <InventoryDetails />
+          </RequireAuth>
+        }></Route>
+        <Route path='/addinventories' element={
+          <AddInventories />
+        }></Route>
+        <Route path='/manageinventories' element={
+          <ManageInventories />
+        }></Route>
+        <Route path='/myinventory' element={
+          <MyInventory />
+        }></Route>
+        <Route path='*' element={<Notfound />}></Route>
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }
