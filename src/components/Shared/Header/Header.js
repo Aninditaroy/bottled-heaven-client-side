@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import hamburgerMenu from '../../../images/header/hamburger-menu.png';
-import logo from '../../../images/logos/logo (1).png';
+import logo from '../../../images/logos/logo.png';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from './../../../.firebase.init';
+import { signOut } from 'firebase/auth';
 const Header = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const [user] = useAuthState(auth);
+    const handleLogOut = () =>{
+        signOut(auth);
+    }
     return (
         <div >
             <nav className="relative flex flex-wrap items-center justify-between px-2 pt-3 nav-font">
@@ -58,13 +65,24 @@ const Header = () => {
                                 as={Link} to="/blog">
                                 Blog
                             </Link>
-                            <Link
-                                className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900 mt-3"
-                                as={Link} to="/login">
-                                <button type="button" className="
-                                border  border-amber-800 hover:bg-amber-700
-                                hover:text-white focus:ring-4 text-amber-900 font-medium rounded-lg text-md px-12 py-2 mr-2 mb-2">Login</button>
-                            </Link>
+                           {
+                               user 
+                               ?
+                               <Link className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900 mt-3"
+                               as={Link} to="/">
+                               <button onClick={handleLogOut} type="button" className="
+                               border  border-amber-800 hover:bg-amber-700
+                               hover:text-white focus:ring-4 text-amber-900 font-medium rounded-lg text-md px-12 py-2 mr-2 mb-2">Logout</button>
+                           </Link>
+                               :
+                               <Link
+                               className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900 mt-3"
+                               as={Link} to="/login">
+                               <button type="button" className="
+                               border  border-amber-800 hover:bg-amber-700
+                               hover:text-white focus:ring-4 text-amber-900 font-medium rounded-lg text-md px-12 py-2 mr-2 mb-2">Login</button>
+                           </Link>
+                           }
                         </div>
                     </div>
                 </div>
