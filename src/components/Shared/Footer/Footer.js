@@ -79,7 +79,7 @@ const Footer = () => {
                 </div>
                 <div className="bg-gray-200/50 sm:w-full">
                     <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                        <p className="text-gray-500 text-sm text-center sm:text-left font-semibold">© 2022 Bottled Perfume</p>
+                        <p className="text-gray-500 text-sm text-center sm:text-left font-semibold">© 2022 Bottled Heaven</p>
                         <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
                             <span className="text-gray-500 hover:text-black">
                                 <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">

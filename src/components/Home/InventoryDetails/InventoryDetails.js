@@ -17,7 +17,7 @@ const InventoryDetails = () => {
                 <img className="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={inventoryDetails.img} alt="" />
                 <div className="flex flex-col justify-between leading-normal my-12 mx-2">
                     <h5 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">{inventoryDetails.name}</h5>
-                    <small className="text-xl">{inventoryDetails.price}</small>
+                    <small className="text-xl">${inventoryDetails.price}</small>
                     <p className="text-sm tracking-tight text-slate-600 leading-6 py-2 pr-2">{inventoryDetails.description}</p>
                     <span className='text-md font-semibold mb-3'>Quantity: <span className="bg-gray-200/70 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded">{inventoryDetails.quantity} in stock</span>
                     </span>
