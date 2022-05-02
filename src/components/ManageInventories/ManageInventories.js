@@ -93,7 +93,7 @@ const ManageInventories = () => {
                                                     {perfume.description}
                                                 </td>
                                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                    <button onClick={() => handleDelete(perfume._id)} className=' bg-red-500 w-8 h-8 rounded'><img src={bin} alt="" className="w-6 h-6 flex mx-auto" /></button>
+                                                    <button onClick={() => handleDelete(perfume._id)} className=' bg-red-500 w-10 h-10 rounded-full'><img src={bin} alt="" className="w-6 h-6 flex mx-auto" /></button>
                                                 </td>
                                             </tr>
                                         </>)

@@ -40,8 +40,8 @@ const InventoryDetails = () => {
                     <span className='text-md font-semibold mb-3'>Quantity: <span className="bg-gray-200/70 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded">{inventoryDetails.quantity} in stock</span>
                     </span>
                     <div className='flex justify-center items-center'>
-                        <input type="text" name="quantity" id="quantity" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-black focus:border-black block w-40 h-10 px-3 py-4 mt-4 font-bold " placeholder="Qty" required />
-                        <button type="button" className="text-white bg-black flex mx-auto hover:bg-white hover:text-black border mr-14 hover:border-black rounded-lg text-sm px-3 py-2  text-center mb-1  mt-5 font-bold">Update Quantity</button>
+                        <input type="text" name="quantity" id="quantity" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-black focus:border-black block w-32 h-10 px-3 py-4 mt-4 font-bold " placeholder="Qty" required />
+                        <button type="button" className="text-white bg-black flex mx-auto hover:bg-white hover:text-black border mr-14 hover:border-black rounded-lg text-sm px-5 py-2  text-center mb-1  mt-5 font-bold">Restock Quantity</button>
                     </div>
                     <br />
                     <small className="text-blue-400 text-sm mb-2">Supplier: {inventoryDetails.supplier_name}</small>
