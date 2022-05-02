@@ -10,19 +10,19 @@ const Footer = () => {
                             <h2 className="title-font font-semibold text-gray-900 tracking-widest text-md mb-3">Help & Information</h2>
                             <nav className="list-none mb-10">
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">About Us</span>
+                                    <span className="text-gray-600 cursor-pointer hover:font-medium hover:text-amber-800 hover:duration-300   text-sm">About Us</span>
                                 </li>
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">Private Policy</span>
+                                    <span className="text-gray-600 cursor-pointer hover:font-medium hover:text-amber-800 hover:duration-300   text-sm">Private Policy</span>
                                 </li>
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">Terms & Conditions</span>
+                                    <span className="text-gray-600 cursor-pointer hover:font-medium hover:text-amber-800 hover:duration-300   text-sm">Terms & Conditions</span>
                                 </li>
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">Products Return</span>
+                                    <span className="text-gray-600 cursor-pointer hover:font-medium hover:text-amber-800 hover:duration-300   text-sm">Products Return</span>
                                 </li>
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">Wholesale Policy</span>
+                                    <span className="text-gray-600 cursor-pointer hover:font-medium hover:text-amber-800 hover:duration-300   text-sm">Wholesale Policy</span>
                                 </li>
                             </nav>
                         </div>
@@ -30,19 +30,19 @@ const Footer = () => {
                             <h2 className="title-font font-semibold text-gray-900 tracking-widest text-md mb-3">About Us</h2>
                             <nav className="list-none mb-10">
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">Dealer Policy</span>
+                                    <span className="text-gray-600 cursor-pointer hover:font-medium hover:text-amber-800 hover:duration-300   text-sm">Dealer Policy</span>
                                 </li>
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">Inventory</span>
+                                    <span className="text-gray-600 cursor-pointer hover:font-medium hover:text-amber-800 hover:duration-300   text-sm">Inventory</span>
                                 </li>
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">Contact</span>
+                                    <span className="text-gray-600 cursor-pointer  hover:font-medium hover:text-amber-800 hover:duration-300   text-sm">Contact</span>
                                 </li>
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">Home Page</span>
+                                    <span className="text-gray-600 cursor-pointer  hover:font-medium hover:text-amber-800 hover:duration-300   text-sm">Home Page</span>
                                 </li>
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">Perfumes</span>
+                                    <span className="text-gray-600 cursor-pointer  hover:text-amber-800 hover:duration-300   text-sm">Perfumes</span>
                                 </li>
                             </nav>
                         </div>
@@ -50,26 +50,26 @@ const Footer = () => {
                             <h2 className="title-font font-semibold text-gray-900 tracking-widest text-md mb-3">Categories</h2>
                             <nav className="list-none mb-10">
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">Help Center</span>
+                                    <span className="text-gray-600 cursor-pointer hover:font-medium  hover:text-amber-800 hover:duration-300   text-sm">Help Center</span>
                                 </li>
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">Address Inventory Store</span>
+                                    <span className="text-gray-600 cursor-pointer hover:font-medium hover:text-amber-800 hover:duration-300   text-sm">Address Inventory Store</span>
                                 </li>
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">Receivers & Amplifiers</span>
+                                    <span className="text-gray-600 cursor-pointer hover:font-medium hover:text-amber-800 hover:duration-300   text-sm">Receivers & Amplifiers</span>
                                 </li>
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">Dealers</span>
+                                    <span className="text-gray-600 cursor-pointer hover:font-medium hover:text-amber-800 hover:duration-300   text-sm">Dealers</span>
                                 </li>
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">Seller</span>
+                                    <span className="text-gray-600 cursor-pointer hover:font-medium hover:text-amber-800 hover:duration-300   text-sm">Seller</span>
                                 </li>
                             </nav>
                         </div>
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4 sm:w-full lg:py-0">
                             <nav className="list-none mb-10">
                                 <li>
-                                    <span className="text-gray-600 cursor-pointer hover:text-amber-800 hover:underline text-sm">
+                                    <span className="cursor-pointer ">
                                     <img src={logo} className="mb-12" alt="logo" />
                                     </span>
                                 </li>

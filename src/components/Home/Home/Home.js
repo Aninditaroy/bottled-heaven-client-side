@@ -13,7 +13,7 @@ const Home = () => {
                     <img src={banner} alt="" className='lg:px-40 lg:w-full sm:w-80 lg:m-20 lg:p-0 md:p-0 sm:p-0' />
                     <div>
                         <h1 className='lg:px-10 text-5xl lg:text-8xl text-amber-900/70 lg:ml-11 lg:mt-60 font-bold' style={{ paddingLeft: '15px' }}>Best Perfume</h1>
-                        <h4 className='lg:px-10 text-xl  text-amber-800 lg:ml-12 font-bold mt-5' style={{ paddingLeft: '15px' }}>For her, for him, for you this is a collection of fragrances coloured by the emotions to discover, love and share.We Distributes fragrances around the world for a variety of fashion brands, celebrities and lifestyles.</h4>
+                        <h4 className='lg:px-48 text-xl  text-amber-800 lg:ml-12 font-regular mt-5' style={{ paddingLeft: '15px' }}>For her, for him, for you this is a collection of fragrances coloured by the emotions to discover, love and share.We Distributes fragrances around the world for a variety of fashion brands, celebrities and lifestyles.</h4>
                     </div>
                 </div>
                 <div className=''>

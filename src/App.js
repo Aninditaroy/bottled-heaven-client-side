@@ -15,6 +15,7 @@ import ManageInventories from './components/ManageInventories/ManageInventories'
 import AddInventories from './components/AddInventories/AddInventories';
 import Notfound from './components/NotFound/Notfound';
 import Footer from './components/Shared/Footer/Footer';
+import Blog from './components/Blog/Blog';
 function App() {
   return (
     <>
@@ -25,6 +26,7 @@ function App() {
         <Route path='/inventories' element={<Inventories />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
+        <Route path='/blog' element={<Blog />}></Route>
         <Route path='/inventory/:inventoryId' element={
           <RequireAuth>
             <InventoryDetails />

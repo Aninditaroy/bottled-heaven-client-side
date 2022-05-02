@@ -27,6 +27,9 @@ const AddInventories = () => {
                     <p className='text-xl text-center font-bold mb-10 mt-4'>New Inventory</p>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="mx-auto w-80 relative mb-5">
+                            <input type="email" name="email"  {...register("email")} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Email" />
+                        </div>
+                        <div className="mx-auto w-80 relative mb-5">
                             <input type="text" name="name"  {...register("name")} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Name" />
                         </div>
                         <div className="mx-auto w-80 relative mb-5">
