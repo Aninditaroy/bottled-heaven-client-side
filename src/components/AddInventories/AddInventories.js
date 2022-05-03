@@ -6,7 +6,7 @@ const AddInventories = () => {
     const { handleSubmit, register } = useForm();
     const navigate = useNavigate();
     const onSubmit = data => {
-        const url = `http://localhost:5000/perfumes`;
+        const url = `https://bottled-heaven.herokuapp.com/perfumes`;
         fetch(url, {
             method: 'POST',
             headers: {

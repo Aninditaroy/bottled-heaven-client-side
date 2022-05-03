@@ -13,7 +13,7 @@ const InventoryDetails = () => {
         console.log(oldQuantity);
         const quantity = oldQuantity - 1;
         const inventory = { quantity };
-        const url = `http://localhost:5000/perfumes/${id}`;
+        const url = `https://bottled-heaven.herokuapp.com/perfumes/${id}`;
         fetch(url, {
             method: 'POST',
             headers: {

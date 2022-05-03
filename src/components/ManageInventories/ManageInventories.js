@@ -14,7 +14,7 @@ const ManageInventories = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/perfumes/${id}`;
+            const url = `https://bottled-heaven.herokuapp.com/perfumes/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
