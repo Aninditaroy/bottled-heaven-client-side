@@ -1,4 +1,16 @@
-#btn-back-to-top {
-    position: fixed;
-    display: none;
+/* @media screen and (min-width:641px) and (max-width:768px){
+  .carousel-inner-area {
+      margin-left: 550px;
+      margin-right: 550px;
+      padding-left: 50px;
+      padding-right: 50px;
   }
+}
+@media screen and (min-width:769px) and (max-width:2500px){
+  .carousel-inner-area {
+      margin-left: 550px;
+      margin-right: 550px;
+      padding-left: 100px;
+      padding-right: 100px;
+  }
+} */
