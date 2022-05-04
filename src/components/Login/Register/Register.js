@@ -2,11 +2,14 @@ import React from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import google from '../../../images/social/google.png';
 import auth from '../../../.firebase.init';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
+import useToken from './../../../hooks/useToken';
 
 const Register = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     const navigateLogin = () => {
         navigate('/login');
     }
@@ -17,6 +20,10 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+    const [token] = useToken(user || googleUser);
+    if(token){
+        navigate(from, { replace: true })
+    }
     const handleRegister = async event => {
         event.preventDefault();
         const name = event.target.name.value;

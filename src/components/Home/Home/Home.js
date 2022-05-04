@@ -43,7 +43,7 @@ const Home = () => {
             </div>
             <h1 className='lg:px-10 text-5xl lg:text-5xl text-amber-900/70 lg:ml-11 lg:mt-11 lg:mb-16 font-bold text-center mt-16 sm:mt-16'><span className='border-amber-900 border-b-2 uppercase'>Our Blogs</span></h1>
             <section>
-                <div id="carouselExampleCaptions" class="carousel slide relative carousel-dark my-10 lg:ml-96 lg:mr-96 lg:pl-28 lg:pr-28 lg:bg-gray-50 lg:rounded-lg lg:shadow-2xl "  data-bs-ride="carousel" style={{ height: '680px' }}>
+                <div id="carouselExampleCaptions" class="carousel slide relative carousel-dark my-10 md:ml-44 md:mr-44 md:pl-5 md:pr-5 md:bg-gray-50 md:rounded-lg md:shadow-2xl  lg:ml-96 lg:mr-96 lg:pl-14 lg:pr-14 lg:bg-gray-50 lg:rounded-lg lg:shadow-2xl "  data-bs-ride="carousel" style={{ height: '680px' }}>
                     <div class="carousel-inner relative w-full overflow-hidden h-100">
                         <div class="carousel-item active relative float-left w-full text-center">
                             <h1 class="text-3xl  mx-auto text-amber-900/70 max-w-4xl lg:font-bold p-5 lg:mt-2">

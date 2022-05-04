@@ -5,6 +5,7 @@ import auth from './../../../.firebase.init';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useToken from './../../../hooks/useToken';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -20,8 +21,12 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [sendPasswordResetEmail, passwordSending, passwordError] = useSendPasswordResetEmail(auth);
+    const [token] = useToken(user);
     let errorElement;
     if (user || googleUser) {
+        // navigate(from, { replace: true });
+    }
+    if(token){
         navigate(from, { replace: true });
     }
     if (error) {
@@ -40,13 +45,13 @@ const Login = () => {
         else{
             toast('Please enter your email address');
         }
-        
     }
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        signInWithEmailAndPassword(email,password);
+        await signInWithEmailAndPassword(email,password);
+        navigate('/home');
     }
     return (
         <div>

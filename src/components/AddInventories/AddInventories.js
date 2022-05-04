@@ -1,12 +1,18 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import auth from '../../.firebase.init';
+import useInventoryDetails from '../../hooks/useInventoryDetails';
 
 const AddInventories = () => {
     const { handleSubmit, register } = useForm();
+    const { inventoryId } = useParams();
+    const [inventoryDetails] = useInventoryDetails(inventoryId);
     const navigate = useNavigate();
+    const [user] = useAuthState(auth);
     const onSubmit = data => {
-        const url = `https://bottled-heaven.herokuapp.com/perfumes`;
+        const url = `https://nameless-temple-36405.herokuapp.com/perfumes`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -27,7 +33,7 @@ const AddInventories = () => {
                     <p className='text-xl text-center font-bold mb-10 mt-4'>New Inventory</p>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="mx-auto w-80 relative mb-5">
-                            <input type="email" name="email"  {...register("email")} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Email" />
+                            <input type="email" name="email"  {...register("email")} value={user?.email} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Email" readOnly/>
                         </div>
                         <div className="mx-auto w-80 relative mb-5">
                             <input type="text" name="name"  {...register("name")} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Name" />
