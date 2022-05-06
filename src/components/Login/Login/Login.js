@@ -6,6 +6,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWith
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useToken from './../../../hooks/useToken';
+import Loading from '../../Loading/Loading';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -29,6 +30,9 @@ const Login = () => {
     }
     if(token){
         navigate(from, { replace: true });
+    }
+    if(loading || googleLoading || passwordSending){
+        return <Loading/>
     }
     if (error) {
         errorElement =

@@ -5,6 +5,7 @@ import auth from '../../../.firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import useToken from './../../../hooks/useToken';
+import Loading from '../../Loading/Loading';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -23,6 +24,9 @@ const Register = () => {
     const [token] = useToken(user || googleUser);
     if(token){
         navigate(from, { replace: true })
+    }
+    if(loading || googleLoading){
+        return <Loading/>
     }
     const handleRegister = async event => {
         event.preventDefault();
