@@ -7,7 +7,7 @@ const usePerfumes = () => {
         fetch('https://nameless-temple-36405.herokuapp.com/perfumes')
         .then(res => res.json())
         .then(data => setPerfumes(data));
-    },[]);
+    },[perfumes]);
     return [perfumes];
 };
 

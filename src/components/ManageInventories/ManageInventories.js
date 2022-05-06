@@ -34,65 +34,65 @@ const ManageInventories = () => {
                     <span> Add New Inventory Item</span>
                 </button>
             </div>
-            <div class="flex flex-col text-left m-10">
-                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-60">
-                        <div class="shadow-xl overflow-hidden border-b border-gray-100 sm:rounded-lg">
-                            <table class="min-w-full divide-y divide-gray-200">
-                                <thead class="bg-slate-100">
+            <div className="flex flex-col text-left m-10">
+                <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-60">
+                        <div className="shadow-xl overflow-hidden border-b border-gray-100 sm:rounded-lg">
+                            <table className="min-w-full divide-y divide-gray-200">
+                                <thead className="bg-slate-100">
                                     <tr>
-                                        <th scope="col" class="px-6 py-3 text-left text-sm text-black font-bold uppercase tracking-wider">
+                                        <th scope="col" className="px-6 py-3 text-left text-sm text-black font-bold uppercase tracking-wider">
                                             Name & Price
                                         </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-sm text-black font-bold uppercase tracking-wider">
+                                        <th scope="col" className="px-6 py-3 text-left text-sm text-black font-bold uppercase tracking-wider">
                                             Quantity
                                         </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-sm text-black font-bold uppercase tracking-wider">
+                                        <th scope="col" className="px-6 py-3 text-left text-sm text-black font-bold uppercase tracking-wider">
                                             Seller
                                         </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-sm text-black font-bold uppercase tracking-wider">
+                                        <th scope="col" className="px-6 py-3 text-left text-sm text-black font-bold uppercase tracking-wider">
                                             Description
                                         </th>
-                                        <th scope="col" class="px-6 py-3 text-right text-sm text-black font-bold uppercase tracking-wider">
+                                        <th scope="col" className="px-6 py-3 text-right text-sm text-black font-bold uppercase tracking-wider">
                                             Action
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody class="bg-white divide-y divide-gray-200">
+                                <tbody className="bg-white divide-y divide-gray-200">
                                     {
                                         perfumes.map(perfume => <>
                                             <tr key={perfume._id} perfume={perfume}>
-                                                <td class="px-6 py-4 whitespace-nowrap">
-                                                    <div class="flex items-center">
-                                                        <div class="flex-shrink-0 h-12 w-12">
+                                                <td className="px-6 py-4 whitespace-nowrap">
+                                                    <div className="flex items-center">
+                                                        <div className="flex-shrink-0 h-12 w-12">
                                                             <img
-                                                                class="h-12 w-12 rounded-full"
+                                                                className="h-12 w-12 rounded-full"
                                                                 src={perfume.img}
                                                                 alt=""
                                                             />
                                                         </div>
-                                                        <div class="ml-4">
-                                                            <div class="text-md font-semibold  text-gray-600">
+                                                        <div className="ml-4">
+                                                            <div className="text-md font-semibold  text-gray-600">
                                                                 {perfume.name}
                                                             </div>
-                                                            <div class="text-sm text-gray-500">
+                                                            <div className="text-sm text-gray-500">
                                                                 ${perfume.price}
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td class="px-6 py-4 whitespace-nowrap">
-                                                    <span class="text-sm text-gray-500 hover:bg-gray">{perfume.quantity}</span>
+                                                <td className="px-6 py-4 whitespace-nowrap">
+                                                    <span className="text-sm text-gray-500 hover:bg-gray">{perfume.quantity}</span>
                                                 </td>
-                                                <td class="px-6 py-4 whitespace-nowrap">
-                                                    <span class="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100  text-green-800" >
+                                                <td className="px-6 py-4 whitespace-nowrap">
+                                                    <span className="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100  text-green-800" >
                                                         {perfume.supplier_name}
                                                     </span>
                                                 </td>
-                                                <td class="px-6 py-4 whitespace-wrap text-sm text-gray-500">
+                                                <td className="px-6 py-4 whitespace-wrap text-sm text-gray-500">
                                                     {perfume.description}
                                                 </td>
-                                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                                <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                                     <button onClick={() => handleDelete(perfume._id)} className=' bg-red-500 w-10 h-10 rounded-full'><img src={bin} alt="" className="w-6 h-6 flex mx-auto" /></button>
                                                 </td>
                                             </tr>

@@ -1,9 +1,11 @@
 import React from 'react';
-const MyInventory = () => {
+
+const Loading = () => {
     return (
         <div>
+            
         </div>
     );
 };
 
-export default MyInventory;
+export default Loading;
