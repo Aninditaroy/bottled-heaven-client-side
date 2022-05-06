@@ -19,6 +19,7 @@ const InventoryDetails = () => {
             const restokeQuantity = parseInt(event.target.quantity.value)
             quantity += restokeQuantity;
             event.target.quantity.value = ' ';
+            toast('Perfume Restocked')
         }
         const updatedUser = { quantity };
 
@@ -41,7 +42,7 @@ const InventoryDetails = () => {
     return (
         <>
             <Link to='/manageinventories' className='flex justify-center mx-auto'>
-                <button className='w-80 block text-white bg-black hover:bg-white hover:text-black border border-black hover:border-blacks text-sm px-12 py-3  text-center mb-5 mx-auto mt-8 font-bold'>
+                <button className='w-80 block text-white bg-black hover:bg-white hover:text-black border border-black hover:border-blacks text-sm px-12 py-3  text-center mx-auto mt-6 font-bold'>
                     Manage Inventories
                 </button>
             </Link>

@@ -17,9 +17,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className=''>
-                    <h1 className='lg:px-10 text-5xl lg:text-5xl text-amber-900/70 lg:ml-11 lg:mt-11 lg:mb-10 font-bold text-center mt-16 sm:mt-16'><span className='border-amber-900 
-                             border-b-2'>Our Perfumes</span>
-                    </h1>
+                <h1 className='lg:px-10 text-3xl lg:text-4xl  lg:ml-11 lg:mt-11 lg:mb-16 font-bold text-center mt-16 sm:mt-16 uppercase'><span className='border-gray-300  border-b-2 pr-24 pl-24 border-t-2'>Our Perfumes</span></h1>
                     <div className="lg:mx-auto xl:mx-auto 2xl:mx-auto md:mx-auto ">
                         <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 mb-20 md:gap-3 sm:gap-y-3 lg:px-10 '>
                             {
@@ -28,7 +26,7 @@ const Home = () => {
                         </div>
                     </div>
                     <Link to='/manageinventories' className='flex justify-center mx-auto'>
-                        <button className='w-80 block text-white bg-black hover:bg-white border-black  hover:text-black border hover:border-blacks text-sm px-12 py-3  text-center mb-5 mx-auto mt-3 font-bold'>
+                        <button className='w-80 block text-white bg-black hover:bg-white border-black  hover:text-black border hover:border-blacks text-sm px-12 py-3  text-center mb-10 mx-auto mt-3 font-bold'>
                             Manage Inventories
                         </button>
                     </Link>
@@ -47,7 +45,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <h1 className='lg:px-10 text-5xl lg:text-5xl text-amber-900/70 lg:ml-11 lg:mt-11 lg:mb-16 font-bold text-center mt-16 sm:mt-16'><span className='border-amber-900 border-b-2 uppercase'>Our Blogs</span></h1>
+            <h1 className='lg:px-10 text-3xl lg:text-4xl  lg:ml-11 lg:mt-11 lg:mb-16 font-bold text-center mt-16 sm:mt-16 uppercase'><span className='border-gray-300  border-b-2 pr-24 pl-24 border-t-2'>Our Blogs</span></h1>
             <section>
                 <div id="carouselExampleCaptions" className="carousel slide relative carousel-dark my-10 md:ml-44 md:mr-44 md:pl-5 md:pr-5 md:bg-gray-50 md:rounded-lg md:shadow-2xl  lg:ml-96 lg:mr-96 lg:pl-14 lg:pr-14 lg:bg-gray-50 lg:rounded-lg lg:shadow-2xl " data-bs-ride="carousel" style={{ height: '680px' }}>
                     <div className="carousel-inner relative w-full overflow-hidden h-100">
