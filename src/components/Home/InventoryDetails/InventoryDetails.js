@@ -7,7 +7,6 @@ const InventoryDetails = () => {
     const { inventoryId } = useParams();
     const [inventoryDetails, setinventoryDetails] = useInventoryDetails(inventoryId);
     const handleInventoryDetails = (event) => {
-        // console.log(event.target.id)
         event.preventDefault();
         let quantity = parseInt(inventoryDetails.quantity)
         if (event.target.id === 'delivered') {
@@ -15,9 +14,9 @@ const InventoryDetails = () => {
             toast('One Perfume Delivered')
         }
         if (event.target.id === 'restock') {
-
             const restokeQuantity = parseInt(event.target.quantity.value)
             quantity += restokeQuantity;
+            // console.log(quantity);
             event.target.quantity.value = ' ';
             toast('Perfume Restocked')
         }
