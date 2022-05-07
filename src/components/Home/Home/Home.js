@@ -194,23 +194,23 @@ const Home = () => {
                     </button>
                 </div>
             </section>
-            <div class="container my-10 px-6 mx-auto">
-                <section class="mb-32 text-gray-800 text-center lg:text-left">
-                    <div class="px-6 py-12 md:px-12">
-                        <div class="container mx-auto xl:px-32">
-                            <div class="grid lg:grid-cols-2  items-center">
-                                <div class="md:mt-10 lg:mt-0 mb-12 lg:mb-0">
+            <div className="container my-10 px-6 mx-auto">
+                <section className="mb-32 text-gray-800 text-center lg:text-left">
+                    <div className="px-6 py-12 md:px-12">
+                        <div className="container mx-auto xl:px-32">
+                            <div className="grid lg:grid-cols-2  items-center">
+                                <div className="md:mt-10 lg:mt-0 mb-12 lg:mb-0">
                                     <div
-                                        class="relative block rounded-lg shadow-lg px-6 py-12 md:px-12 lg:-mr-14"
+                                        className="relative block rounded-lg shadow-lg px-6 py-12 md:px-12 lg:-mr-14"
                                         style={{ background: "hsla(0, 0%, 100%, 0.55)", backdropFilter: "blur(5px)", zIndex: "1" }}>
-                                        <h1 class="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-12">
-                                            Subscribe to<br /><span class="text-pink-600">Bottled Heaven?</span>
+                                        <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-12">
+                                            Subscribe to<br /><span className="text-pink-600">Bottled Heaven?</span>
                                         </h1>
-                                        <div class="md:flex flex-row">
+                                        <div className="md:flex flex-row">
                                             <input type="text" name="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full px-4 py-2 mb-2 md:mb-0" placeholder="Enter your email" />
                                             <button
                                                 type="submit"
-                                                class="inline-block px-7 py-3 bg-pink-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-pink-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out"
+                                                className="inline-block px-7 py-3 bg-pink-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-pink-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out"
                                                 data-mdb-ripple="true"
                                                 data-mdb-ripple-color="light"
                                             >
@@ -219,10 +219,10 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="md:mb-12 lg:mb-0">
+                                <div className="md:mb-12 lg:mb-0">
                                     <img style={{ transform: 'rotate(3deg)' }}
                                         src="https://i.ibb.co/Lr69GwT/photo-1618436624013-b4d65f4142d2.jpg"
-                                        class="w-full rounded-lg shadow-lg rotatelg6"
+                                        className="w-full rounded-lg shadow-lg rotatelg6"
                                         alt=""
                                     />
                                 </div>
