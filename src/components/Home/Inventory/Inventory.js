@@ -6,7 +6,7 @@ const Inventory = ({perfume}) => {
     const navigateToInventoryId = (`/inventory/${_id}`);
     return (
         <div className='mt-5'>
-            <div className="lg:mx-auto flex lg:w-96 flex-col justify-center  bg-white rounded-2xl shadow-xl   hover:scale-105 ease-in duration-300">
+            <div className="lg:mx-auto flex lg:w-96 flex-col justify-center  bg-white rounded-2xl shadow-xl hover:scale-105 ease-in duration-300">
                 <img src={img} className="rounded-t-2xl object-cover" alt="" />
                 <div className="p-4">
                     <h1 className="text-3xl font-medium  pb-2">{name}</h1>

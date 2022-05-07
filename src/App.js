@@ -16,6 +16,7 @@ import AddInventories from './components/AddInventories/AddInventories';
 import Notfound from './components/NotFound/Notfound';
 import Footer from './components/Shared/Footer/Footer';
 import Blog from './components/Blog/Blog';
+import About from './components/About/About';
 function App() {
   return (
     <>
@@ -27,6 +28,7 @@ function App() {
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
         <Route path='/blog' element={<Blog />}></Route>
+        <Route path='/about' element={<About />}></Route>
         <Route path='/inventory/:inventoryId' element={
           <RequireAuth>
             <InventoryDetails />
