@@ -36,12 +36,12 @@ const MyInventory = () => {
             {
                 myInventoryLists.map(myInventoryList => <>
                     <div key={myInventoryList._id} myInventiryList={myInventoryList} className='flex'>
-                        <div class="w-2/4 flex flex-col mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-t my-5">
+                        <div class="lg:w-2/4 flex flex-col mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-t my-5">
                             <div class="flex justify-between px-6 py-4">
                                 <div class="bg-blue-500 text-xs  px-2 py-2.5 rounded border border-gray-200 text-white font-bold">My Inventory</div>
                                 <div class=" bg-blue-500 text-xs px-2 py-2.5 rounded border border-gray-200 text-gray-200 font-bold">{myInventoryList.email}</div>
                             </div>
-                            <div class="px-6 py-4 border-t border-gray-200 w-screen">
+                            <div class="px-6 py-4 border-t border-gray-200 lg:w-screen sm:w-full">
                                 <div class="border rounded-lg p-4 bg-gray-100">
                                     <div class="w-full lg:w-1/2 p-3">
                                         <div class="flex flex-col lg:flex-row-reverse rounded overflow-hidden h-auto w-full border  shadow-lg">
