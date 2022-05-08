@@ -20,7 +20,7 @@ const Register = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
-    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth, { sendEmailVerification: true });
     // const [token] = useToken(user || googleUser);
     // if(token){
     //     navigate(from, { replace: true })

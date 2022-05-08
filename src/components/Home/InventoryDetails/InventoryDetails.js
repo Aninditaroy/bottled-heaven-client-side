@@ -47,7 +47,7 @@ const InventoryDetails = () => {
                 </button>
             </Link>
             <div className='my-10 flex items-center justify-center'>
-                <div className="flex flex-col items-center  rounded-lg border shadow-md md:flex-row md:max-w-xl bg-gray-100 sm:w-22 sm:px-5">
+                <div className="flex flex-col items-center  rounded-lg border shadow-md md:flex-row md:max-w-xl bg-gray-100 sm:w-24 sm:px-5">
                     <img className="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={inventoryDetails.img} alt="" />
                     <div className="flex flex-col justify-between leading-normal my-12 mx-2">
                         <h5 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">{inventoryDetails.name}</h5>
