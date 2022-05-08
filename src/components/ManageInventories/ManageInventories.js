@@ -7,7 +7,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Loading/Loading';
 const ManageInventories = () => {
-    const [perfumes, setPerfumes, isLoading] = usePerfumes();
+    const [perfumes, setPerfumes] = usePerfumes();
     const navigate = useNavigate();
     const naviagteAddInventory = () => {
         navigate('/addinventories');
@@ -29,7 +29,6 @@ const ManageInventories = () => {
     }
     return (
         <>
-          {isLoading && <Loading />}
             <div className='flex justify-center mx-auto'>
                 <button onClick={naviagteAddInventory} type="button" className=" px-12 rounded-lg text-sm py-2 mr-16 text-center mb-2  mt-3 font-bold flex justify-center items-center w-72  border  border-black">
                     <img src={addItem} alt="" className="w-5 h-5 flex mx-auto" />

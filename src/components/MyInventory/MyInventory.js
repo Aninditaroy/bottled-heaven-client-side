@@ -10,7 +10,7 @@ const MyInventory = () => {
     const [user] = useAuthState(auth);
     const [myInventoryLists, setMyInventoryLists] = useState([]);
     const navigate = useNavigate();
-    const [perfumes, setPerfumes, isLoading] = usePerfumes();
+    const [perfumes, setPerfumes] = usePerfumes();
     useEffect(() => {
         const url = `https://nameless-temple-36405.herokuapp.com/perfumes?email=${user.email}`;
         fetch(url)
@@ -34,7 +34,6 @@ const MyInventory = () => {
     }
     return (
         <>
-         {isLoading && <Loading />}
             {
                 myInventoryLists.map(myInventoryList => <>
                     <div key={myInventoryList._id} myInventiryList={myInventoryList} className='flex'>

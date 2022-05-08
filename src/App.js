@@ -35,13 +35,19 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path='/addinventories' element={
-          <AddInventories />
+          <RequireAuth>
+            <AddInventories />
+          </RequireAuth>
         }></Route>
         <Route path='/manageinventories' element={
-          <ManageInventories />
+          <RequireAuth>
+            <ManageInventories />
+          </RequireAuth>
         }></Route>
         <Route path='/myinventory' element={
-          <MyInventory />
+         <RequireAuth>
+            <MyInventory />
+         </RequireAuth>
         }></Route>
         <Route path='*' element={<Notfound />}></Route>
       </Routes>
