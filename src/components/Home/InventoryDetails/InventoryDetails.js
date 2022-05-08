@@ -11,8 +11,9 @@ const InventoryDetails = () => {
         let quantity = parseInt(inventoryDetails.quantity)
         if (event.target.id === 'delivered') {
             quantity -= 1;
-            toast('One Perfume Delivered')
+            toast('Perfume Delivered');
         }
+
         if (event.target.id === 'restock') {
             const restokeQuantity = parseInt(event.target.quantity.value)
             quantity += restokeQuantity;
@@ -62,7 +63,7 @@ const InventoryDetails = () => {
                         <br />
                         <small className="text-blue-400 text-sm mb-2">Supplier: {inventoryDetails.supplier_name}</small>
                         <button onClick={handleInventoryDetails} type="button" id='delivered' className="w-72 block text-white bg-black hover:bg-white hover:text-black border  hover:border-black rounded-lg text-sm py-3 mr-16 text-center mb-2  mt-3 font-bold" >Delivered</button>
-                        <ToastContainer/>
+                        <ToastContainer />
                     </div>
                 </div>
             </div>

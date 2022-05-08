@@ -4,10 +4,12 @@ import './Home.css';
 import usePerfumes from './../../../hooks/usePerfumes';
 import Inventory from '../Inventory/Inventory';
 import { Link } from 'react-router-dom';
+import Loading from '../../Loading/Loading';
 const Home = () => {
-    const [perfumes] = usePerfumes();
+    const [perfumes, setPerfumes, isLoading] = usePerfumes();
     return (
         <>
+            {isLoading && <Loading />}
             <div>
                 <div className="sm:p-24 bg-gradient-to-r from-rose-100 to-amber-100/30 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:gap-3 lg:p-0" style={{ height: '750px' }}>
                     <img src={banner} alt="" className='lg:px-40 lg:w-full sm:w-80 lg:m-20 lg:p-0 md:p-0 sm:p-0' />
@@ -16,8 +18,9 @@ const Home = () => {
                         <h4 className='lg:px-48 text-xl  text-amber-800 lg:ml-12 font-regular mt-5' style={{ paddingLeft: '15px' }}>For her, for him, for you this is a collection of fragrances coloured by the emotions to discover, love and share.We Distributes fragrances around the world for a variety of fashion brands, celebrities and lifestyles.</h4>
                     </div>
                 </div>
+          
                 <div className=''>
-                    <h1 className='lg:px-10 text-3xl lg:text-4xl  lg:ml-11 lg:mt-11 lg:mb-16 font-bold text-center mt-16 sm:mt-16 uppercase'><span className='border-gray-300  lg:border-b-2 lg:pr-24 lg:pl-24 lg:border-t-2'>Our Perfumes</span></h1>
+                    <h1 className='lg:px-10 text-3xl lg:text-4xl  lg:ml-11 lg:mt-11 lg:mb-16 font-bold text-center mt-16 sm:mt-16 uppercase'><span className='border-black  lg:border-b-2 lg:pr-24 lg:pl-24 lg:border-t-2'>Our Perfumes</span></h1>
                     <div className="lg:mx-auto xl:mx-auto 2xl:mx-auto md:mx-auto ">
                         <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 mb-20 md:gap-3 sm:gap-y-3 lg:px-10 '>
                             {
@@ -45,12 +48,12 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <h1 className='lg:px-10 text-3xl lg:text-4xl  lg:ml-11 lg:mt-11 lg:mb-16 font-bold text-center mt-16 sm:mt-16 uppercase'><span className='border-gray-300  lg:border-b-2 lg:pr-24 lg:pl-24 lg:border-t-2'>Our Blogs</span></h1>
+            <h1 className='lg:px-10 text-3xl lg:text-4xl  lg:ml-11 lg:mt-11 lg:mb-16 font-bold text-center mt-16 sm:mt-16 uppercase'><span className='border-black  lg:border-b-2 lg:pr-24 lg:pl-24 lg:border-t-2'>Our Blogs</span></h1>
             <section>
-                <div id="carouselExampleCaptions" className="carousel slide relative carousel-dark my-10 md:ml-44 md:mr-44 md:pl-5 md:pr-5 md:bg-gray-50 md:rounded-lg md:shadow-2xl  lg:ml-96 lg:mr-96 lg:pl-14 lg:pr-14 lg:bg-gray-50 lg:rounded-lg lg:shadow-2xl flex mx-auto" data-bs-ride="carousel" style={{ height: '680px'}}>
+                <div id="carouselExampleCaptions" className="carousel slide relative carousel-dark my-10 md:ml-44 md:mr-44 md:pl-5 md:pr-5 md:bg-gray-50 md:rounded-lg md:shadow-2xl  lg:ml-96 lg:mr-96 lg:pl-14 lg:pr-14 lg:bg-gray-50 lg:rounded-lg lg:shadow-2xl flex mx-auto" data-bs-ride="carousel" style={{ height: '680px' }}>
                     <div className="carousel-inner relative w-full overflow-hidden h-100">
                         <div className="carousel-item active relative float-left w-full text-center">
-                            <h1 className="text-3xl  mx-auto text-pink-600 max-w-4xl lg:font-bold p-5 lg:mt-2">
+                            <h1 className="text-3xl  mx-auto text-black max-w-4xl lg:font-bold p-5 lg:mt-2">
                                 How perfumes are made?
                             </h1>
                             <div className="mt-12 mb-6 flex justify-center">
@@ -67,7 +70,7 @@ const Home = () => {
                             <p className="text-gray-500">- Anna Morian</p>
                         </div>
                         <div className="carousel-item relative float-left w-full text-center ">
-                            <h1 className="text-3xl  mx-auto text-pink-600 max-w-4xl lg:font-bold p-5 lg:mt-2">
+                            <h1 className="text-3xl  mx-auto text-black max-w-4xl lg:font-bold p-5 lg:mt-2">
                                 Ingredients Used to Make Perfume?
                             </h1>
                             <div className="mt-12 mb-6 flex justify-center">
@@ -78,13 +81,13 @@ const Home = () => {
                                 />
                             </div>
                             <p className="text-sm  mx-auto  max-w-4xl p-5">
-                                "Many perfumes are made by extracting scented oil from natural ingredients. These ingredients can include various plants, fruits, woods and even animal secretions. Other resources like alcohol, coal, tars and petrochemicals can be used during the manufacturing process.For scents that don't occur in nature or do not produce essential oils, synthetic chemicals are used to emulate the scent. Many popular and hard to find scents fall into this category, so it's likely that your favorite perfume uses at least some synthetic scents. "
+                                "Many perfumes are made by extracting scented oil from natural ingredients. These ingredients can include various plants, fruits, woods and even animal secretions. Other resources like alcohol, coal, tars and petrochemicals can be used during the manufacturing process.For scents that don't occur in nature or do not produce essential oils, synthetic chemicals are used to emulate the scent. Many popular and hard to find scents fall into this category, so it's likely that your favorite perfume uses at least some synthetic scents."
                             </p>
 
                             <p className="text-gray-500">- Teresa May</p>
                         </div>
                         <div className="carousel-item relative float-left w-full text-center ">
-                            <h1 className="text-3xl  mx-auto text-pink-600 max-w-4xl lg:font-bold p-5 lg:mt-2">
+                            <h1 className="text-3xl  mx-auto text-black max-w-4xl lg:font-bold p-5 lg:mt-2">
                                 How to apply perfumes AKA fragrances?
                             </h1>
                             <div className="mt-12 mb-6 flex justify-center">
@@ -99,7 +102,7 @@ const Home = () => {
                             <p className="text-gray-500">- Jake Paralta</p>
                         </div>
                         <div className="carousel-item relative float-left w-full text-center ">
-                            <h1 className="text-3xl  mx-auto text-pink-600 max-w-4xl lg:font-bold p-5 lg:mt-2">
+                            <h1 className="text-3xl  mx-auto text-black max-w-4xl lg:font-bold p-5 lg:mt-2">
                                 What is Perfume?
                             </h1>
                             <div className="mt-12 mb-6 flex justify-center">
@@ -114,7 +117,7 @@ const Home = () => {
                             <p className="text-gray-500">- Amy Santiago</p>
                         </div>
                         <div className="carousel-item relative float-left w-full text-center ">
-                            <h1 className="text-3xl  mx-auto text-pink-600 max-w-4xl lg:font-bold p-5 lg:mt-2">
+                            <h1 className="text-3xl  mx-auto text-black max-w-4xl lg:font-bold p-5 lg:mt-2">
                                 Aromatic Sources of Perfume?
                             </h1>
                             <div className="mt-12 mb-6 flex justify-center">
@@ -129,7 +132,7 @@ const Home = () => {
                             <p className="text-gray-500">- Jofferd William</p>
                         </div>
                         <div className="carousel-item relative float-left w-full text-center ">
-                            <h1 className="text-3xl  mx-auto text-pink-600 max-w-4xl lg:font-bold p-5 lg:mt-2">
+                            <h1 className="text-3xl  mx-auto text-black max-w-4xl lg:font-bold p-5 lg:mt-2">
                                 Fragrant extracts for Perfume?
                             </h1>
                             <div className="mt-12 mb-6 flex justify-center">
@@ -144,7 +147,7 @@ const Home = () => {
                             <p className="text-gray-500">- Joey Tribbiani</p>
                         </div>
                         <div className="carousel-item relative float-left w-full text-center ">
-                            <h1 className="text-3xl  mx-auto text-pink-600 max-w-4xl lg:font-bold p-5 lg:mt-2">
+                            <h1 className="text-3xl  mx-auto text-black max-w-4xl lg:font-bold p-5 lg:mt-2">
                                 How to Compose Perfume ?
                             </h1>
                             <div className="mt-12 mb-6 flex justify-center">
@@ -159,7 +162,7 @@ const Home = () => {
                             <p className="text-gray-500">- Monica Geller</p>
                         </div>
                         <div className="carousel-item relative float-left w-full text-center">
-                            <h1 className="text-3xl  mx-auto text-pink-600 max-w-4xl lg:font-bold p-5 lg:mt-2">
+                            <h1 className="text-3xl  mx-auto text-black max-w-4xl lg:font-bold p-5 lg:mt-2">
                                 Plant resources for Perfumes?
                             </h1>
                             <div className="mt-12 mb-6 flex justify-center">

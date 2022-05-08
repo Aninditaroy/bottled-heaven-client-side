@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import usePerfumes from './../../../hooks/usePerfumes';
 
 const Inventory = ({perfume}) => {
     const {_id,name,img,description,price,quantity,supplier_name} = perfume;
     const navigateToInventoryId = (`/inventory/${_id}`);
+    const [isLoading] = usePerfumes();
     return (
         <div className='mt-5'>
             <div className="lg:mx-auto flex lg:w-96 flex-col justify-center  bg-white rounded-2xl shadow-xl hover:scale-105 ease-in duration-300">

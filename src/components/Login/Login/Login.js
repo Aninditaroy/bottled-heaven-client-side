@@ -7,6 +7,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useToken from './../../../hooks/useToken';
 import Loading from '../../Loading/Loading';
+import axios from 'axios';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -23,14 +24,14 @@ const Login = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [sendPasswordResetEmail, passwordSending, passwordError] = useSendPasswordResetEmail(auth);
     
-    const [token] = useToken(user);
+    // const [token] = useToken(user);
     let errorElement;
     if (user || googleUser) {
         // navigate(from, { replace: true });
     }
-    if(token){
-        navigate(from, { replace: true });
-    }
+    // if(token){
+    //     navigate(from, { replace: true });
+    // }
     if(loading || googleLoading || passwordSending){
         return <Loading/>
     }
@@ -44,7 +45,7 @@ const Login = () => {
     const resetPassword = async() =>{
         const email = emailRef.current.value;
         if(email){
-            sendPasswordResetEmail(email);
+            await sendPasswordResetEmail(email);
             toast('Send Email');
         }
         else{
@@ -56,7 +57,11 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         await signInWithEmailAndPassword(email,password);
-        navigate('/home');
+        // navigate('/home');
+        const { data } = await axios.post('https://nameless-temple-36405.herokuapp.com/login',{email});
+        // console.log(data);
+        localStorage.setItem('accessToken',data.accessToken);
+        navigate(from, {replace: true});
     }
     return (
         <div>

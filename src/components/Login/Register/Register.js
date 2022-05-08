@@ -21,12 +21,12 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
-    const [token] = useToken(user || googleUser);
-    if(token){
-        navigate(from, { replace: true })
-    }
-    if(loading || googleLoading){
-        return <Loading/>
+    // const [token] = useToken(user || googleUser);
+    // if(token){
+    //     navigate(from, { replace: true })
+    // }
+    if (loading || googleLoading) {
+        return <Loading />
     }
     const handleRegister = async event => {
         event.preventDefault();
@@ -37,8 +37,10 @@ const Register = () => {
         if (password !== confirmPassword) {
             return swal("Error!", "Passwords didn't match!", "error");
         }
-        await createUserWithEmailAndPassword(email, password);
-        navigate('/home');
+        else {
+            await createUserWithEmailAndPassword(email, password);
+            navigate('/home');
+        }
     }
     return (
         <div>
