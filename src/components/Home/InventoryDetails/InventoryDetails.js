@@ -53,8 +53,13 @@ const InventoryDetails = () => {
                         <h5 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">{inventoryDetails.name}</h5>
                         <small className="text-xl">${inventoryDetails.price}</small>
                         <p className="text-sm tracking-tight text-slate-600 leading-6 py-2 pr-2">{inventoryDetails.description}</p>
-                        <span className='text-md font-semibold mb-3'>Quantity: <span className="bg-gray-200/70 text-gray-800 text-sm font-semibold mr-2 px-3 py-2 rounded">{inventoryDetails.quantity} in stock</span>
+                        <span className='text-md font-semibold mb-3'>Quantity: <span className="bg-gray-200/70 text-gray-800 text-sm font-semibold mr-2 px-3 py-2 rounded">{
+                            inventoryDetails.quantity <= 0 ? <span className=" text-red-600 text-sm font-semibold mr-2 px-3 py-2 rounded">Stock Out</span> :
+                                inventoryDetails.quantity
+                        }
                         </span>
+                        </span>
+
 
                         <form onSubmit={handleInventoryDetails} id="restock" className='flex justify-center items-center'>
                             <input type="number" name="quantity" placeholder="Qty" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-black focus:border-black block w-32 h-10 px-3 py-4 mt-4 font-bold " />

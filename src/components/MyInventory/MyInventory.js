@@ -5,11 +5,12 @@ import auth from '../../.firebase.init';
 import usePerfumes from '../../hooks/usePerfumes';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../Loading/Loading';
 const MyInventory = () => {
     const [user] = useAuthState(auth);
     const [myInventoryLists, setMyInventoryLists] = useState([]);
     const navigate = useNavigate();
-    const [perfumes, setPerfumes] = usePerfumes();
+    const [perfumes, setPerfumes, isLoading] = usePerfumes();
     useEffect(() => {
         const url = `https://nameless-temple-36405.herokuapp.com/perfumes?email=${user.email}`;
         fetch(url)
@@ -32,7 +33,8 @@ const MyInventory = () => {
         }
     }
     return (
-        <div>
+        <>
+         {isLoading && <Loading />}
             {
                 myInventoryLists.map(myInventoryList => <>
                     <div key={myInventoryList._id} myInventiryList={myInventoryList} className='flex'>
@@ -50,22 +52,28 @@ const MyInventory = () => {
                                                 <p className="text-black font-bold text-2xl leading-tight mt-5">{myInventoryList.name}</p>
                                                 <p className="text-black font-bold text-xl leading-tight mt-5">${myInventoryList.price}</p>
                                                 <p className="text-grey-darker text-base">{myInventoryList.description}</p>
-                                                <span className="text-md font-bold  my-2">Quantity: {myInventoryList.quantity}</span>
+                                                <span className='text-md font-bold  my-2'>Quantity: <span className="text-md font-bold  my-2">{
+                                                    myInventoryList.quantity <= 0 ? <span className="text-red-600 text-md font-bold  my-2">Stock Out</span> :
+                                                        myInventoryList.quantity
+                                                }
+                                                </span>
+                                                </span>
+
                                                 <span className="text-sm font-bold text-blue-600  my-2">Supplier: {myInventoryList.supplier_name}</span>
                                             </div>
                                         </div>
-                                        <button onClick={() =>handleDelete(myInventoryList._id)} type="button" className="mt-5 inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs  uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete </button>
+                                        <button onClick={() => handleDelete(myInventoryList._id)} type="button" className="mt-5 inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs  uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete </button>
                                         <p className="text-gray-500 mb-6 text-xs my-3">Once you delete, you will lose all data associated with it.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <ToastContainer/>
+                        <ToastContainer />
                     </div>
                 </>
                 )
             }
-        </div>
+        </>
     );
 };
 
