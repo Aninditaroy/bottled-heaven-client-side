@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Bottled Heaven
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bottled Heaven Live Site Link [Create React App](https://bottled-heaven.web.app).
 
-## Available Scripts
+## Websites Features
 
-In the project directory, you can run:
+* In header page,we can find home,inventory ,about ,blog and login page.Add inventories,manage inventories and my inventory these pages are protected by login.If a user is not logged in or registered he/she cannot access these pages.
 
-### `npm start`
+* In home page,we can see 5 sections.First one is banner and some info.If we scrool down we can see the perfumes section where there are 6 perfumes ,the rest of them are in the inventory section.From home page ,we can go into manage inventries also only if we logged in.Then used Jumbotron section in here.And added some blogs page to see all the blogs in carousel mode.Then added some extra section in home page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* In inventory page,we added some perfume and their details.This includes perfume name,price,description,quantity,supplier name,and a update button that redirect into the inventory details page where we can update or restock the quantity and delivered the product(perfume)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* In About page,added details about team who are behind the bottled heaven.
 
-### `npm test`
+* In blogs page,you will get to know about some question and ans(Q&A).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* In add inventories,we have to fill up a form that is about adding new inventory to our inventories.This form includes the email whom is already logged in user, name,photo url,description ,price,quantity and a supplier name.If we clicked on the add button ,those informtion will saved in the inventories section.
 
-### `npm run build`
+* In manage inventories,we can manage all the products(perfumes) and we can delete a particular product.There is also a button which is add to invenotry button.If we click into it,it will redirected into the add inventory page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* In my inventory page,only logged in user can see the his/her product which it created before.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* In login, you must give your registered email and password otherwise you will get an error.If you are new to bottled heaven you can simply register.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* In register page,you have to fill up the form which contain name,email and password.Once you registered you can simply log in.
 
-### `npm run eject`
+* Other than that,you can also use some authentication by using google.For this,you have to give your valid account details and access.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* In footer there are some details about website which has the website name,resources,legal and social follow details.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Frameworks and Technologies
+* Sweetalert
+* React toastify
+* Tailwind (CSS framework)
+* Tailwind elements (Tailwind component library)
+* Flowbite(Tailwind component library)
+* React router dom
+* React firebase hooks
+* Axios
+* React hook form
