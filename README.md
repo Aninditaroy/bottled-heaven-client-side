@@ -1,6 +1,6 @@
 # Bottled Heaven
 
-Bottled Heaven Live Site Link [Create React App](https://bottled-heaven.web.app).
+Bottled Heaven Live Site Link [Bottled Heaven](https://bottled-heaven.web.app).
 
 ## Websites Features
 
