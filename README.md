@@ -12,8 +12,6 @@ Bottled Heaven Live Site Link [Bottled Heaven](https://bottled-heaven.web.app).
 
 * In About page,added details about team who are behind the bottled heaven.
 
-* In blogs page,you will get to know about some question and ans(Q&A).
-
 * In add inventories,we have to fill up a form that is about adding new inventory to our inventories.This form includes the email whom is already logged in user, name,photo url,description ,price,quantity and a supplier name.If we clicked on the add button ,those informtion will saved in the inventories section.
 
 * In manage inventories,we can manage all the products(perfumes) and we can delete a particular product.There is also a button which is add to invenotry button.If we click into it,it will redirected into the add inventory page.
