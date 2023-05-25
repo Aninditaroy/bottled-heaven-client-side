@@ -5,14 +5,14 @@ const usePerfumes = () => {
     const [perfumes, setPerfumes] = useState([]);
     const [isLoading, setLoading] = useState(true)
     useEffect(() => {
-        fetch('https://nameless-temple-36405.herokuapp.com/perfumes')
+        fetch('https://bottled-heaven-server-side.vercel.app/perfumes')
             .then(res => res.json())
             .then(data => {
                 setPerfumes(data)
                 setLoading(false)
             });
     }, [perfumes]);
-    return [perfumes,setPerfumes,isLoading];
+    return [perfumes, setPerfumes, isLoading];
 };
 
 export default usePerfumes;

@@ -7,7 +7,7 @@
 //         const getToken = async () => {
 //             const email = user?.user?.email;
 //             if (email) {
-//                 const { data } = await axios.post('https://nameless-temple-36405.herokuapp.com/login', { email });
+//                 const { data } = await axios.post('https://bottled-heaven-server-side.vercel.app/login', { email });
 //                 setToken(data.accessToken);
 //                 localStorage.setItem('accessToken', data.accessToken);
 //             }

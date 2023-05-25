@@ -23,7 +23,7 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [sendPasswordResetEmail, passwordSending, passwordError] = useSendPasswordResetEmail(auth);
-    
+
     // const [token] = useToken(user);
     let errorElement;
     if (user || googleUser) {
@@ -32,23 +32,23 @@ const Login = () => {
     // if(token){
     //     navigate(from, { replace: true });
     // }
-    if(loading || googleLoading || passwordSending){
-        return <Loading/>
+    if (loading || googleLoading || passwordSending) {
+        return <Loading />
     }
     if (error) {
         errorElement =
             <p className='text-red-600/100 text-center'>Error: {error?.message}</p>
     }
-    const navigateRegister = () =>{
+    const navigateRegister = () => {
         navigate('/register');
     }
-    const resetPassword = async() =>{
+    const resetPassword = async () => {
         const email = emailRef.current.value;
-        if(email){
+        if (email) {
             await sendPasswordResetEmail(email);
             toast('Send Email');
         }
-        else{
+        else {
             toast('Please enter your email address');
         }
     }
@@ -56,12 +56,12 @@ const Login = () => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        await signInWithEmailAndPassword(email,password);
+        await signInWithEmailAndPassword(email, password);
         // navigate('/home');
-        const { data } = await axios.post('https://nameless-temple-36405.herokuapp.com/login',{email});
+        const { data } = await axios.post('https://bottled-heaven-server-side.vercel.app/login', { email });
         // console.log(data);
-        localStorage.setItem('accessToken',data.accessToken);
-        navigate(from, {replace: true});
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
     }
     return (
         <div>
@@ -70,7 +70,7 @@ const Login = () => {
                     <p className='text-2xl text-center font-bold mb-6 mt-4'>Login</p>
                     <form onSubmit={handleSubmit}>
                         <div className="mx-auto w-80 relative mb-5">
-                            <input ref={emailRef} type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Email" required/>
+                            <input ref={emailRef} type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Email" required />
                         </div>
                         <div className="mx-auto w-80 relative mb-5">
                             <input ref={passwordRef} type="password" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-black focus:border-black block w-full p-2.5" placeholder="Password" required />
@@ -92,7 +92,7 @@ const Login = () => {
                     <div className='text-sm text-center mb-10 mt-4'><p>Don't have an account? <span className='hover:underline hover:text-amber-800 cursor-pointer' onClick={navigateRegister}>Create an account</span></p></div>
                 </div>
             </div>
-            <ToastContainer/>
+            <ToastContainer />
         </div>
     );
 };

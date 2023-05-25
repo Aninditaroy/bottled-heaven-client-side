@@ -10,7 +10,7 @@ const AddInventories = () => {
     const navigate = useNavigate();
     const [user] = useAuthState(auth);
     const onSubmit = data => {
-        const url = `https://nameless-temple-36405.herokuapp.com/perfumes`;
+        const url = `https://bottled-heaven-server-side.vercel.app/perfumes`;
         fetch(url, {
             method: 'POST',
             headers: {

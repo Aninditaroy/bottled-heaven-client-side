@@ -24,7 +24,7 @@ const InventoryDetails = () => {
         const updatedUser = { quantity };
 
         //send data to the server
-        const url = `https://nameless-temple-36405.herokuapp.com/perfumes/${inventoryId}`
+        const url = `https://bottled-heaven-server-side.vercel.app/perfumes/${inventoryId}`
         fetch(url, {
             method: 'put',
             headers: {
