@@ -8,7 +8,7 @@ import { signOut } from 'firebase/auth';
 const Header = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
     const [user] = useAuthState(auth);
-    const handleLogOut = () =>{
+    const handleLogOut = () => {
         signOut(auth);
     }
     return (
@@ -59,40 +59,35 @@ const Header = () => {
                                 as={Link} to="/About">
                                 About
                             </Link>
-                            <Link
-                                className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
-                                hover:border-b-2"
-                                as={Link} to="/blog">
-                                Blog
-                            </Link>
+
                             {
                                 user && <>
-                                 <Link as={Link} to='/addinventories' className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
+                                    <Link as={Link} to='/addinventories' className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
                                 hover:border-b-2">Add Inventories</Link>
-                                 <Link as={Link} to="/manageinventories" className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
+                                    <Link as={Link} to="/manageinventories" className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
                                 hover:border-b-2" >Manage Inventories</Link>
-                                 <Link as={Link} to="/myinventory" className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
+                                    <Link as={Link} to="/myinventory" className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900  hover: border-amber-900 
                                 hover:border-b-2">My Inventory</Link>
                                 </>
                             }
-                           {
-                               user 
-                               ?
-                               <Link className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900 mt-3"
-                               as={Link} to="/">
-                               <button onClick={handleLogOut} type="button" className="
+                            {
+                                user
+                                    ?
+                                    <Link className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900 mt-3"
+                                        as={Link} to="/">
+                                        <button onClick={handleLogOut} type="button" className="
                                border  border-amber-800 hover:bg-amber-700
                                hover:text-white focus:ring-4 text-amber-900 font-medium rounded-lg text-md px-12 py-2 mr-2 mb-2">Logout</button>
-                           </Link>
-                               :
-                               <Link
-                               className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900 mt-3"
-                               as={Link} to="/login">
-                               <button type="button" className="
+                                    </Link>
+                                    :
+                                    <Link
+                                        className="nav-item px-3 py-2 flex items-center   hover:opacity-75 font-semibold text-amber-900 mt-3"
+                                        as={Link} to="/login">
+                                        <button type="button" className="
                                border  border-amber-800 hover:bg-amber-700
                                hover:text-white focus:ring-4 text-amber-900 font-medium rounded-lg text-md px-12 py-2 mr-2 mb-2">Login</button>
-                           </Link>
-                           }
+                                    </Link>
+                            }
                         </div>
                     </div>
                 </div>
